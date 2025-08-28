@@ -1,7 +1,7 @@
 # About
 This python script is created with the help of chatGPT with some modifications.
 
-This script allows you to update your listening status from last fm to bluesky. An example can be found at [@scrobble.naturbrilian.dpdns.org‬](https://bsky.app/profile/scrobble.naturbrilian.dpdns.org‬).
+This script allows you to update your listening status from last fm to bluesky. An example can be found at [@scrobble.naturbrilian.dpdns.org‬](https://bsky.app/profile/scrobble.naturbrilian.dpdns.org).
 
 ## Preview
 
