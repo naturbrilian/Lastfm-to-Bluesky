@@ -2,14 +2,12 @@ import time
 import requests
 from atproto import Client, models
 
-# 🔑 Konfigurasi
 LASTFM_USER = "Your_Username"
 LASTFM_API_KEY = "Your_LastFM_Apikey"
 
 BLUESKY_HANDLE = "Your_Handle_Bsky"
 BLUESKY_PASSWORD = "Your_bsky_password"
 
-# 🎵 Ambil data Now Playing dari Last.fm
 def get_now_playing(user, api_key):
     url = "http://ws.audioscrobbler.com/2.0/"
     params = {
@@ -27,7 +25,7 @@ def main():
     client = Client()
     client.login("Your_Handle_Bsky", "Your_Bsky_Password")
 
-    last_posted = None  # buat cek biar gak dobel
+    last_posted = None 
 
     while True:
         try:
@@ -38,7 +36,7 @@ def main():
             album = track["album"]["#text"]
             cover_url = track["image"][-1]["#text"]
 
-            unique_id = f"{artist}-{title}"  # biar gak dobel post
+            unique_id = f"{artist}-{title}"
             if unique_id != last_posted:
                 message = f"Recently Played:\nArtist: {artist}\nTitle: {title}\nAlbum: {album}"
 
@@ -57,7 +55,7 @@ def main():
 
                 last_posted = unique_id
 
-            time.sleep(30)  # cek lagi tiap 30 detik
+            time.sleep(30)
 
         except Exception as e:
             print("❌ Error:", e)
